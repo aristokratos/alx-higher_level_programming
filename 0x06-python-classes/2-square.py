@@ -1,15 +1,17 @@
 #!/usr/bin/python3
-def safe_print_list_integers(my_list=[], x=0):
-    a = 0
-    i = 0
-    while a < x:
-        try:
-            print("{:d}".format(my_list[a]), end="")
-            i = i + 1
-        except IndexError:
-            raise
-        except:
-            pass
-        a = a + 1
-    print("")
-    return i
+"""Define a class Square."""
+
+
+class Square:
+    """Represent a square."""
+
+    def __init__(self, size=0):
+        """Initialize a new Square.
+        Args:
+            size (int): The size of the new square.
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
