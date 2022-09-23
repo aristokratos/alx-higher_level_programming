@@ -1,3 +1,4 @@
+
 """A script that
 - fetches https://intranet.hbtn.io/status.
 - uses urlib package
